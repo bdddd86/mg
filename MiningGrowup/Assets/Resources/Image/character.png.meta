@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 7cd75ddd068cb7945ae841d5e313ba0c
-timeCreated: 1515341960
+guid: 57a919027658a454a8cd9f25cd903dc9
+timeCreated: 1515341785
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: all-big-buttons_0
-    21300002: all-big-buttons_1
-    21300004: all-big-buttons_2
-    21300006: all-big-buttons_3
-    21300008: all-big-buttons_4
-    21300010: all-big-buttons_5
-    21300012: all-big-buttons_6
-    21300014: all-big-buttons_7
-    21300016: all-big-buttons_8
-    21300018: all-big-buttons_9
-    21300020: all-big-buttons_10
-    21300022: all-big-buttons_11
-    21300024: all-big-buttons_12
-    21300026: all-big-buttons_13
-    21300028: all-big-buttons_14
-    21300030: all-big-buttons_15
+    21300000: character_0
+    21300002: character_1
+    21300004: character_2
+    21300006: character_3
+    21300008: character_4
+    21300010: character_5
+    21300012: character_6
+    21300014: character_7
+    21300016: character_8
+    21300018: character_9
+    21300020: character_10
+    21300022: character_11
+    21300024: character_12
+    21300026: character_13
+    21300028: character_14
+    21300030: character_15
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -94,208 +94,208 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: all-big-buttons_0
+      name: character_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 868
-        width: 300
-        height: 124
+        y: 144
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: all-big-buttons_1
+      name: character_1
       rect:
         serializedVersion: 2
-        x: 300
-        y: 868
-        width: 300
-        height: 124
+        x: 32
+        y: 144
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: all-big-buttons_2
+      name: character_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 744
-        width: 300
-        height: 124
+        x: 64
+        y: 144
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: all-big-buttons_3
+      name: character_3
       rect:
         serializedVersion: 2
-        x: 300
-        y: 744
-        width: 300
-        height: 124
+        x: 96
+        y: 144
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: all-big-buttons_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 620
-        width: 300
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: all-big-buttons_5
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 620
-        width: 300
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: all-big-buttons_6
+      name: character_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 496
-        width: 300
-        height: 124
+        y: 96
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: all-big-buttons_7
+      name: character_5
       rect:
         serializedVersion: 2
-        x: 300
-        y: 496
-        width: 300
-        height: 124
+        x: 32
+        y: 96
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: all-big-buttons_8
+      name: character_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 372
-        width: 300
-        height: 124
+        x: 64
+        y: 96
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: all-big-buttons_9
+      name: character_7
       rect:
         serializedVersion: 2
-        x: 300
-        y: 372
-        width: 300
-        height: 124
+        x: 96
+        y: 96
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: all-big-buttons_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 248
-        width: 300
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: all-big-buttons_11
-      rect:
-        serializedVersion: 2
-        x: 300
-        y: 248
-        width: 300
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: all-big-buttons_12
+      name: character_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 124
-        width: 300
-        height: 124
+        y: 48
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: all-big-buttons_13
+      name: character_9
       rect:
         serializedVersion: 2
-        x: 300
-        y: 124
-        width: 300
-        height: 124
+        x: 32
+        y: 48
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: all-big-buttons_14
+      name: character_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 300
-        height: 124
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: all-big-buttons_15
+      name: character_13
       rect:
         serializedVersion: 2
-        x: 300
+        x: 32
         y: 0
-        width: 300
-        height: 124
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
