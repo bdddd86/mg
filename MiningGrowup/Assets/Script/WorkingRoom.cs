@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class WorkingRoom : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+	[Header("[UI]")]
+	public List<PC> listBasicPC;
+	public List<PC> listProPC;
+	public List<PC> listSuperPC;
+
+	public void SetPC(WorkingRoomData roomData)
+	{
 		
 	}
 }

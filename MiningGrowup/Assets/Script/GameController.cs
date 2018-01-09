@@ -16,6 +16,7 @@ public class PCData
 	public int idx;		// PC 위치정보로 쓸 인덱스.
 	public int level;	// PC 업그레이드 레벨.
 	public int type;	// PC 타입. (0, 1, 2)
+	public int state;	// PC 현재상태. (0, 1, 2, 3)
 	public float gauge;	// 코인 보관량. (0-1)
 }
 
@@ -40,15 +41,18 @@ public class GamePlayData
 
 public class GameController : MonoBehaviour {
 
-	// 작업장
-	private Dictionary<int, WorkingRoom> dicWorkingRoom = new Dictionary<int, WorkingRoom>();
+	[Header("[UI]")]
+	public WorkingRoom room_lv_1;
+	public WorkingRoom room_lv_2;
+	public WorkingRoom room_lv_3;
+
 
 	void Start()
 	{
-		LoadWorkingRoomData ();
+		SaveWorkingRoomData ();
 	}
 
-	private void LoadWorkingRoomData()
+	private void SaveWorkingRoomData()
 	{
 		// 가라데이터
 		// 나중에 PlayerPrefs로 저장된 Json 문자열로 대신한다.
@@ -72,6 +76,20 @@ public class GameController : MonoBehaviour {
 
 		gameData.listRoom.Add (roomData);
 
-		Debug.Log(JsonUtility.ToJson (gameData, true));
+		string saveData = JsonUtility.ToJson (gameData, true);
+		Debug.Log(saveData);
+		PlayerPrefs.SetString ("playerinfo", saveData);
+	}
+
+	private void LoadWorkingRoomData()
+	{
+		string loadData = PlayerPrefs.GetString ("playerinfo", string.Empty);
+		if (string.IsNullOrEmpty (loadData)) {
+			// 첫 판.
+		} 
+		else {
+			GamePlayData gameData = JsonUtility.FromJson<GamePlayData> (loadData);
+
+		}
 	}
 }
