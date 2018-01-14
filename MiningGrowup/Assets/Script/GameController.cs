@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum eGameState
 {
@@ -46,6 +47,12 @@ public class GameController : MonoBehaviour {
 	public WorkingRoom room_lv_2;
 	public WorkingRoom room_lv_3;
 
+	[Header("[Cursor]")]
+	public Text plusBitCoin;
+	public Animator plusBitCoinAnim;
+
+	public double bitCoin = 0;
+	public double bitCoinPerTouch = 0.001;
 
 	void Start()
 	{
@@ -90,6 +97,24 @@ public class GameController : MonoBehaviour {
 		else {
 			GamePlayData gameData = JsonUtility.FromJson<GamePlayData> (loadData);
 
+		}
+	}
+
+	int frameCnt = 0;
+	// 터치 처리.
+	void Update()
+	{
+		if (Time.frameCount != frameCnt) {
+			frameCnt = Time.frameCount;
+
+			#if UNITY_EDITOR
+			if (Input.GetMouseButtonDown(0)){
+				bitCoin += bitCoinPerTouch;
+				plusBitCoin.text = string.Format("+{0}",bitCoinPerTouch);
+				plusBitCoin.transform.position = Input.mousePosition;
+				plusBitCoinAnim.SetTrigger("Click");
+			}
+			#endif
 		}
 	}
 }
