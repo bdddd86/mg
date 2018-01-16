@@ -51,6 +51,9 @@ public class GameController : MonoBehaviour {
 	public Text plusBitCoin;
 	public Animator plusBitCoinAnim;
 
+	[Header("[Character]")]
+	public Animator mainCharacter;
+
 	public double bitCoin = 0;
 	public double bitCoinPerTouch = 0.001;
 
@@ -101,20 +104,24 @@ public class GameController : MonoBehaviour {
 	}
 
 	int frameCnt = 0;
+	float deltaTime = 0;
 	// 터치 처리.
 	void Update()
 	{
 		if (Time.frameCount != frameCnt) {
 			frameCnt = Time.frameCount;
 
-			#if UNITY_EDITOR
+			#if UNITY_EDITOR || UNITY_STANDALONE_WIN
 			if (Input.GetMouseButtonDown(0)){
+			#else
+			if (Input.touchCount > 0) {
+			#endif
 				bitCoin += bitCoinPerTouch;
 				plusBitCoin.text = string.Format("+{0}",bitCoinPerTouch);
 				plusBitCoin.transform.position = Input.mousePosition;
 				plusBitCoinAnim.SetTrigger("Click");
+				mainCharacter.SetTrigger ("mining");
 			}
-			#endif
 		}
 	}
 }
