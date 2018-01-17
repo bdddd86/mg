@@ -54,8 +54,16 @@ public class GameController : MonoBehaviour {
 	[Header("[Character]")]
 	public Animator mainCharacter;
 
+	[Header("[Wall]")]
+	public Slider wallHp;
+	public List<GameObject> wallCracked;
+	public ParticleSystem wallCrackedParticle;
+	private double wallHPValue = 1;
+	private int prevCrackedIdx = -1;
+
+	[Header("[Data]")]
 	public double bitCoin = 0;
-	public double bitCoinPerTouch = 0.001;
+	public double bitCoinPerTouch = 0.01;
 
 	void Start()
 	{
@@ -103,6 +111,60 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
+	private void HitDamage()
+	{
+		wallHPValue -= bitCoinPerTouch;
+		wallHp.value = (float)wallHPValue / 1f;
+
+		if (wallHp.value <= 1 && wallHp.value > 0.9) {
+			prevCrackedIdx = -1;
+			for (int i = 0; i < wallCracked.Count; i++) {
+				wallCracked [i].SetActive (false);
+			}
+		} else if (wallHp.value <= 0.9 && wallHp.value > 0.7) {
+			if (prevCrackedIdx != 0) {
+				for (int i = 0; i < wallCracked.Count; i++) {
+					wallCracked [i].SetActive (i == 0);
+				}
+				prevCrackedIdx = 0;
+				wallCrackedParticle.Play ();
+			}
+		} else if (wallHp.value <= 0.7 && wallHp.value > 0.5) {
+			if (prevCrackedIdx != 1) {
+				for (int i = 0; i < wallCracked.Count; i++) {
+					wallCracked [i].SetActive (i == 1);
+				}
+				prevCrackedIdx = 1;
+				wallCrackedParticle.Play ();
+			}
+		} else if (wallHp.value <= 0.5 && wallHp.value > 0.3) {
+			if (prevCrackedIdx != 2) {
+				for (int i = 0; i < wallCracked.Count; i++) {
+					wallCracked [i].SetActive (i == 2);
+				}
+				prevCrackedIdx = 2;
+				wallCrackedParticle.Play ();
+			}
+		} else if (wallHp.value <= 0.3 && wallHp.value > 0.1) {
+			if (prevCrackedIdx != 3) {
+				for (int i = 0; i < wallCracked.Count; i++) {
+					wallCracked [i].SetActive (i == 3);
+				}
+				prevCrackedIdx = 3;
+				wallCrackedParticle.Play ();
+			}
+		} else {
+			if (prevCrackedIdx != 4) {
+				for (int i = 0; i < wallCracked.Count; i++) {
+					wallCracked [i].SetActive (i == 4);
+				}
+				prevCrackedIdx = 4;
+				wallCrackedParticle.Play ();
+			}
+		}
+
+	}
+
 	int frameCnt = 0;
 	float deltaTime = 0;
 	// 터치 처리.
@@ -121,6 +183,7 @@ public class GameController : MonoBehaviour {
 				plusBitCoin.transform.position = Input.mousePosition;
 				plusBitCoinAnim.SetTrigger("Click");
 				mainCharacter.SetTrigger ("mining");
+				HitDamage();
 			}
 		}
 	}
