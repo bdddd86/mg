@@ -50,6 +50,7 @@ public class GameController : MonoBehaviour {
 	[Header("[Cursor]")]
 	public Text plusBitCoin;
 	public Animator plusBitCoinAnim;
+	public Transform plusBitCoinPos;
 
 	[Header("[Character]")]
 	public Animator mainCharacter;
@@ -180,7 +181,7 @@ public class GameController : MonoBehaviour {
 			#endif
 				bitCoin += bitCoinPerTouch;
 				plusBitCoin.text = string.Format("+{0}",bitCoinPerTouch);
-				plusBitCoin.transform.position = Input.mousePosition;
+				plusBitCoinPos.localPosition = Input.mousePosition;
 				plusBitCoinAnim.SetTrigger("Click");
 				mainCharacter.SetTrigger ("mining");
 				HitDamage();
